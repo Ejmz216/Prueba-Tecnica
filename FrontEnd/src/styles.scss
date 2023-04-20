@@ -1,0 +1,35 @@
+.usuarios-list-container {
+  padding-top: 5rem;
+}
+
+.crear-usuarios-container {
+  padding-top: 3rem;
+}
+
+.title {
+  margin: 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-option {
+  min-width: 20rem;
+}
+
+
+
+.active {
+  color: cyan !important;
+  border-bottom-style: solid;
+  border: 1px 0px 0px 0px solid;
+  border-color: cyan;
+}

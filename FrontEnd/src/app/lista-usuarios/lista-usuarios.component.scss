@@ -1,0 +1,36 @@
+tr {
+  text-align: center;
+  border-width: 2px;
+}
+
+.dropdown {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+.perfil-dropdown {
+  border: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  color: gray;
+  border-radius: 3px;
+}
+.caret{
+  right:10px;
+}
+.buscar-perfil {
+  color: white;
+  background: black;
+  border-radius: 3px;
+  border: 0px;
+  width: 25%;
+}
+
+.buscar-perfil:hover{
+  background: cyan;
+  color: black;
+}
