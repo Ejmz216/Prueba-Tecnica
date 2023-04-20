@@ -1,5 +1,5 @@
 .usuarios-list-container {
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .crear-usuarios-container {
@@ -35,7 +35,10 @@
   border-color: cyan;
 }
 
-
+.btn-crear-container {
+  display: flex;
+  justify-content: center;
+}
 
 .caret {
   right: 10px;
@@ -49,7 +52,7 @@
   border: 0px;
 }
 
-.btn-perfil:hover{
+.btn-perfil:hover {
   background: cyan;
   color: black;
 }

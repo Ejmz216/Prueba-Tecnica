@@ -2,6 +2,12 @@ tr {
   text-align: center;
   border-width: 2px;
 }
+.filter-container{
+  padding-top: 2rem;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
 
 .dropdown {
   padding-top: 2rem;
@@ -22,7 +28,22 @@ tr {
 .caret{
   right:10px;
 }
-
-.lista{
+.buscar-perfil {
+  color: white;
+  background: black;
+  border-radius: 3px;
+  border: 0px;
   width: 25%;
 }
+
+.buscar-perfil:hover{
+  background: cyan;
+  color: black;
+}
+
+
+.form-group{
+  width: 50%;
+
+}
+

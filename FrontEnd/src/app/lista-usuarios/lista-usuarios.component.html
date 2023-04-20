@@ -1,16 +1,16 @@
-<div class="container">
-  <!--___________ buscador ___________________-->
+<!--___________ buscador ___________________-->
+<div class="filter-container">
   <div class="form-group">
-    <select class="form-control" id="perfil" [(ngModel)]="perfilSeleccionado">
+    <select class="form-control filter" id="perfil" [(ngModel)]="perfilSeleccionado">
       <option value="">Todos</option>
       <option value="Administrador">Administrador</option>
       <option value="Coordinador">Coordinador</option>
       <option value="Invitado">Invitado</option>
     </select>
   </div>
-  <button class="btn btn-primary" (click)="buscar()">Buscar</button>
+  <button class="btn btn-perfil" (click)="buscar()">Buscar</button>
 </div>
-
+<!-- ____________ Tabla de Display __________ -->
 <div class="usuarios-list-container">
   <table class="table table-striped">
     <thead class="table-light">
