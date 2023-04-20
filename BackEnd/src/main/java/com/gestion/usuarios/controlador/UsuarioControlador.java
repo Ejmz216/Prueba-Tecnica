@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.gestion.usuarios.modelo.TipoPerfil;
 import com.gestion.usuarios.modelo.usuario;
 import com.gestion.usuarios.repositorio.UsuariosRepositorio;
 
@@ -30,5 +32,4 @@ public class UsuarioControlador {
 	public usuario guardarUsuario(@RequestBody usuario usuario) {
 		return repositorio.save(usuario);
 	}
-
 }

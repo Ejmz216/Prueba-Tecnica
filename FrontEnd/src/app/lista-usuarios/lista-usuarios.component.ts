@@ -10,6 +10,9 @@ import { UsuarioService } from '../usuario.service';
 export class ListaUsuariosComponent implements OnInit {
 
   usuarios: Usuario[];
+  usuariosFiltrados: Usuario[];
+  perfilSeleccionado: string = '';
+
 
 
   constructor(private usuarioServicio: UsuarioService) {
@@ -18,14 +21,22 @@ export class ListaUsuariosComponent implements OnInit {
 
   ngOnInit(): void {
     this.obtenerListaDeUsuarios();
-
-
   }
 
-  private obtenerListaDeUsuarios(){
+  private obtenerListaDeUsuarios() {
     this.usuarioServicio.obtenerListaDeUsuarios().subscribe(dato => {
       this.usuarios = dato;
+      this.usuariosFiltrados = dato;
     });
+  }
+
+
+  buscar() {
+    if (this.perfilSeleccionado) {
+      this.usuariosFiltrados = this.usuarios.filter(usuario => usuario.perfil === this.perfilSeleccionado);
+    } else {
+      this.usuariosFiltrados = this.usuarios;
+    }
   }
 
 

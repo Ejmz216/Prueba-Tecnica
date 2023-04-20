@@ -13,11 +13,18 @@ export class UsuarioService {
   constructor(private httpClient: HttpClient) { }
 
   //este metodo nos sirve para obtener los Usuarios
-  obtenerListaDeUsuarios():Observable<Usuario[]>{
+  obtenerListaDeUsuarios(): Observable<Usuario[]> {
     return this.httpClient.get<Usuario[]>(`${this.baseURL}`);
   }
 
   registrarUsuario(usuario: Usuario): Observable<Object> {
     return this.httpClient.post(`${this.baseURL2}`, usuario);
   }
+
+  obtenerUsuariosPorPerfil(perfil: string): Observable<Usuario[]> {
+    const params = new HttpParams().set('perfil', perfil);
+    return this.httpClient.get<Usuario[]>(`${this.baseURL}`, { params: params });
+  }
+
+
 }

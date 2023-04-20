@@ -1,16 +1,14 @@
 <div class="container">
-  <div class="dropdown">
-    <button class="btn dropdown-toggle perfil-dropdown" type="button" data-toggle="dropdown">
-      Perfil
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-      <li><a href="#">JavaScript</a></li>
-    </ul>
-    <button class="btn-perfil lista">BUSCAR</button>
+  <!--___________ buscador ___________________-->
+  <div class="form-group">
+    <select class="form-control" id="perfil" [(ngModel)]="perfilSeleccionado">
+      <option value="">Todos</option>
+      <option value="Administrador">Administrador</option>
+      <option value="Coordinador">Coordinador</option>
+      <option value="Invitado">Invitado</option>
+    </select>
   </div>
+  <button class="btn btn-primary" (click)="buscar()">Buscar</button>
 </div>
 
 <div class="usuarios-list-container">
@@ -23,7 +21,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let usuario of usuarios">
+      <tr *ngFor="let usuario of usuariosFiltrados">
         <td>{{ usuario.usuario }}</td>
         <td>{{ usuario.email }}</td>
         <td>{{ usuario.perfil }}</td>
