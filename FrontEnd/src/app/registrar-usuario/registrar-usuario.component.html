@@ -1,25 +1,48 @@
 <div class="crear-usuarios-container">
-  <div class="col-md-7 offset-md-3">
+  <div class="col-md-7 ">
     <h3 class="text-center">Crear Usuario</h3>
-    <form (ngSubmit)="OnSubmit()" #usuarioForm="ngForm">
-      <form class="form-group">
+    <!-- ____________ Nombre de Usuario__________ -->
+    <form (ngSubmit)="OnSubmit()" #usuarioForm="ngForm" class="usuario-form">
+      <div class="form-group">
         <input type="text" class="form-control" id="nombre" [(ngModel)]="usuario.usuario" required name="nombre"
           required minlength="4" maxlength="10" placeholder="Nombre de Usuario" #nombre="ngModel">
+      </div>
 
-
-
+      <!-- ____________Crear contraseña__________ -->
+      <div class="pssw-container">
         <div class="form-group">
-          <input type="text" class="form-control" id="pssw" [(ngModel)]="usuario.pssw" required name="pssw" required
-            minlength="6" maxlength="20" placeholder="Contraseña" #nombre="ngModel">
+          <input type="text" class="form-control pssw" id="pssw" [(ngModel)]="usuario.pssw" required name="pssw"
+            required minlength="6" maxlength="20" placeholder="Contraseña" #nombre="ngModel">
         </div>
-
         <div class="form-group">
-          <input type="text" class="form-control" id="pssw" [(ngModel)]="usuario.pssw" required name="pssw" required
-            minlength="6" maxlength="20" placeholder="Confirmar Contraseña" #nombre="ngModel">
+          <input type="text" class="form-control pssw" id="pssw" [(ngModel)]="usuario.pssw" required name="pssw"
+            required minlength="6" maxlength="20" placeholder="Confirmar Contraseña" #nombre="ngModel">
         </div>
+      </div>
+      <!-- ___________ Email __________ -->
+      <div class="form-group">
+        <input type="text" class="form-control" id="email" [(ngModel)]="usuario.usuario" required name="email" required
+          minlength="4" maxlength="10" placeholder="Correo electrónico" #nombre="ngModel">
+      </div>
 
-
-      </form>
+      <!-- ____________Perfil__________ -->
+      <div class="form-group">
+        <div class="dropdown-crear">
+          <button class="btn dropdown-toggle crear-dropdown" type="button" data-toggle="dropdown">
+            Perfil
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- ____________Crear__________ -->
+      <div class="btn-crear-container">
+        <button class="btn-perfil crear"> CREAR </button>
+      </div>
     </form>
   </div>
 </div>

@@ -4,6 +4,9 @@
 
 .crear-usuarios-container {
   padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+
 }
 
 .title {
@@ -25,11 +28,28 @@
   min-width: 20rem;
 }
 
-
-
 .active {
   color: cyan !important;
   border-bottom-style: solid;
   border: 1px 0px 0px 0px solid;
   border-color: cyan;
+}
+
+
+
+.caret {
+  right: 10px;
+}
+
+
+.btn-perfil {
+  color: white;
+  background: black;
+  border-radius: 3px;
+  border: 0px;
+}
+
+.btn-perfil:hover{
+  background: cyan;
+  color: black;
 }
