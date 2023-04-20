@@ -18,7 +18,7 @@ import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

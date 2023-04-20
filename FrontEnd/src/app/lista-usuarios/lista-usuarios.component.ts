@@ -22,9 +22,9 @@ export class ListaUsuariosComponent implements OnInit {
 
   }
 
-  obtenerListaDeUsuarios(perfil?: string) {
-    this.usuarioServicio.obtenerListaDeUsuarios(perfil).subscribe((data: Usuario[]) => {
-      this.usuarios = data;
+  private obtenerListaDeUsuarios(){
+    this.usuarioServicio.obtenerListaDeUsuarios().subscribe(dato => {
+      this.usuarios = dato;
     });
   }
 

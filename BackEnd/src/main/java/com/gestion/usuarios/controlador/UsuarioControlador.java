@@ -26,7 +26,7 @@ public class UsuarioControlador {
 		return repositorio.findAll();
 	}
 
-	@PostMapping("/usuarios")
+	@PostMapping("/registrar-usuarios")
 	public usuario guardarUsuario(@RequestBody usuario usuario) {
 		return repositorio.save(usuario);
 	}

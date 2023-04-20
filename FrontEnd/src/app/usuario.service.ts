@@ -7,16 +7,17 @@ import { Usuario } from './usuario';
   providedIn: 'root'
 })
 export class UsuarioService {
-
+  //Esta URL obtiene el listado de todos los usuarios en el backend
   private baseURL = "http://localhost:8080/api/v1/usuarios";
-
+  private baseURL2 = "http://localhost:8080/api/v1/registrar-usuarios";
   constructor(private httpClient: HttpClient) { }
 
-  obtenerListaDeUsuarios(perfil?: string): Observable<Usuario[]> {
-    let params = new HttpParams();
-    if (perfil) {
-      params = params.set('perfil', perfil);
-    }
-    return this.httpClient.get<Usuario[]>(`${this.baseURL}`, { params });
+  //este metodo nos sirve para obtener los Usuarios
+  obtenerListaDeUsuarios():Observable<Usuario[]>{
+    return this.httpClient.get<Usuario[]>(`${this.baseURL}`);
+  }
+
+  registrarUsuario(usuario: Usuario): Observable<Object> {
+    return this.httpClient.post(`${this.baseURL2}`, usuario);
   }
 }
