@@ -3,8 +3,7 @@ Prueba tecnica FullStack - Angular / Springboot
 
 Requirements:
 
-TECHNICAL ADMISSION TEST
-This technical test is intended to assess basic programming knowledge using the Angular and Springboot frameworks. This includes the following requirements.
+This test is intended to assess programming knowledge using the Angular and Springboot frameworks. This includes the following requirements.
 
 Request
 
