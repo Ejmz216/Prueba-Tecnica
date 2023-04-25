@@ -39,3 +39,8 @@ Create an application containing the following views:<br>
       I. The password must have a minimum of 6 characters.<br>
       II. The email must be in the correct format.<br>
       III. He must be mandatory profile<br>
+      
+      
+      
+   ![image](https://user-images.githubusercontent.com/67802793/234405350-4151c526-b8dd-4061-beae-3b1f89836191.png)
+
